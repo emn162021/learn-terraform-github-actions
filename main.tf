@@ -2,20 +2,20 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "3.26.0"
+      version >= "3.26.0"
     }
     random = {
-      source  = "hashicorp/random"
-      version = "3.0.1"
+      source  >= "hashicorp/random"
+      version >= "3.0.1"
     }
   }
   required_version = "~> 1.0"
 
   backend "remote" {
-    organization = "REPLACE_ME"
+    organization = "ACG-Terraform-Demos-emn162021"
 
     workspaces {
-      name = "REPLACE_ME"
+      name = "demo-github-actions"
     }
   }
 }
